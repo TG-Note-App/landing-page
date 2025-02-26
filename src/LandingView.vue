@@ -307,10 +307,10 @@
             </div>  
           </Phone> 
         </div>
+      <Comparison />
+      <ReadyTransform />
       <OnePlace />
       <WhyTelegram />
-      <ReadyTransform />
-      <Comparison />
       <GetAccess />
       <Footer />
     </div>

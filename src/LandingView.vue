@@ -1297,7 +1297,7 @@ onMounted(() => {
 })
 
 const scrollToForm = () => {
-  const formElement = document.querySelector('#access-form')
+  const formElement = document.querySelector('#contact')
   if (formElement) {
     formElement.scrollIntoView({ 
       behavior: 'smooth',

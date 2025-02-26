@@ -7,51 +7,52 @@
       <Feature />
       <FirstUser />
       <div class="grid md:grid-cols-2 gap-20 items-center">
-        <Text title="Transform Your Telegram Experience" description="Turn your cluttered Saved Messages into a powerful, organized workspace. Access everything you need instantly, without the endless scrolling." :items="[
+        <Text class="order-2 md:order-1" title="Transform Your Telegram Experience" description="Turn your cluttered Saved Messages into a powerful, organized workspace. Access everything you need instantly, without the endless scrolling." :items="[
           { icon: 'fas fa-share-nodes', iconColor: 'blue', text: 'Resend messages from any chats' },
           { icon: 'fas fa-bookmark', iconColor: 'purple', text: 'Save messages to your notes' },
           { icon: 'fas fa-bolt', iconColor: 'green', text: 'Quick access to your notes' }
         ]" />
         
         <!-- Visual: Modern Telegram Interface -->
-        <Phone>
+        <Phone class="order-1 md:order-2">
           <!-- Chat Header -->
-          <div class="px-5 py-4 flex items-center gap-3 border-b border-white/5">
-            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
-              <i class="fas fa-bookmark text-white text-lg"></i>
+          <div class="px-4 sm:px-5 py-3 sm:py-4 flex items-center gap-2 sm:gap-3 border-b border-white/5">
+            <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-500 flex items-center justify-center">
+              <i class="fas fa-bookmark text-white text-base sm:text-lg"></i>
             </div>
             <div>
               <h4 class="text-white font-medium">Saved Messages</h4>
-              <p class="text-xs text-white/40">last seen recently</p>
+              <p class="text-xs text-white/40 hidden sm:block">last seen recently</p>
             </div>
           </div>
 
-          <div class="p-4 space-y-3">
+          <div class="p-3 sm:p-4 space-y-2 sm:space-y-3">
             <!-- Message 1 -->
             <div class="flex justify-end">
-              <div class="bg-[#2b5278] rounded-2xl rounded-tr-sm px-4 py-2 max-w-[85%]">
+              <div class="bg-[#2b5278] rounded-xl sm:rounded-2xl rounded-tr-sm px-3 sm:px-4 py-2 max-w-[85%]">
                 <div class="flex items-center gap-2 mb-1">
-                  <i class="fas fa-file-alt text-white/60 text-sm"></i>
-                  <span class="text-white/80 text-sm font-medium">Project Update</span>
+                  <i class="fas fa-file-alt text-white/60 text-xs sm:text-sm"></i>
+                  <span class="text-white/80 text-xs sm:text-sm font-medium">Project Update</span>
                 </div>
-                <p class="text-white text-sm leading-relaxed">Latest changes have been committed 🚀</p>
-                <p class="text-[10px] text-white/40 text-right mt-1">12:30</p>
+                <p class="text-white text-xs sm:text-sm leading-relaxed">Latest changes have been committed 🚀</p>
+                <p class="text-[8px] sm:text-[10px] text-white/40 text-right mt-1">12:30</p>
               </div>
             </div>
 
             <!-- Message 2 -->
             <div class="flex justify-end">
-              <div class="bg-[#2b5278] rounded-2xl rounded-tr-sm px-4 py-2 max-w-[85%]">
+              <div class="bg-[#2b5278] rounded-xl sm:rounded-2xl rounded-tr-sm px-3 sm:px-4 py-2 max-w-[85%]">
                 <div class="flex items-center gap-2 mb-1">
-                  <i class="fas fa-link text-white/60 text-sm"></i>
-                  <span class="text-white/80 text-sm font-medium">GitHub Link</span>
+                  <i class="fas fa-link text-white/60 text-xs sm:text-sm"></i>
+                  <span class="text-white/80 text-xs sm:text-sm font-medium">GitHub Link</span>
                 </div>
-                <p class="text-white text-sm leading-relaxed">github.com/user/project</p>
-                <p class="text-[10px] text-white/40 text-right mt-1">12:31</p>
+                <p class="text-white text-xs sm:text-sm leading-relaxed">github.com/user/project</p>
+                <p class="text-[8px] sm:text-[10px] text-white/40 text-right mt-1">12:31</p>
               </div>
             </div>
 
-            <div class="flex justify-end">
+            <!-- Message 3 - Hide on mobile -->
+            <div class="hidden sm:flex justify-end">
               <div class="bg-[#2b5278] rounded-2xl rounded-tr-sm px-4 py-2 max-w-[85%]">
                 <div class="flex items-center gap-2 mb-1">
                   <i class="fas fa-code text-white/60 text-sm"></i>
@@ -65,11 +66,11 @@
             </div>
 
             <!-- Forward Animation -->
-            <div class="flex justify-center py-8">
+            <div class="flex justify-center py-4 sm:py-8">
               <div class="relative">
-                <div class="absolute inset-0 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-                <div class="relative w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center animate-bounce-subtle">
-                  <i class="fas fa-arrow-down text-white"></i>
+                <div class="absolute inset-0 bg-blue-500/20 rounded-full blur-lg sm:blur-xl animate-pulse"></div>
+                <div class="relative w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center animate-bounce-subtle">
+                  <i class="fas fa-arrow-down text-white text-sm sm:text-base"></i>
                 </div>
               </div>
             </div>
@@ -80,39 +81,38 @@
       <div class="grid md:grid-cols-2 gap-20 items-center mt-24">
           
           <!-- Visual: Modern Telegram Interface -->
-        <Phone>
+        <Phone class="order-1">
           <div class="h-full w-full relative">
-            <div class="px-5 py-4 flex items-center justify-between border-b border-white/10 backdrop-blur-sm bg-black/20">
+            <div class="px-4 sm:px-5 py-3 sm:py-4 flex items-center justify-between border-b border-white/10 backdrop-blur-sm bg-black/20">
               <div>
-                <h4 class="text-white text-xl font-medium">Notes</h4>
+                <h4 class="text-white text-lg sm:text-xl font-medium">Notes</h4>
                 <p class="text-xs text-white/40">Welcome back, Alex</p>
               </div>
               <button class="relative group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-200"></div>
-                <div class="relative w-10 h-10 rounded-full bg-black flex items-center justify-center border border-white/10 group-hover:border-white/20">
-                  <i class="fas fa-plus text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text group-hover:scale-110 transition-all"></i>
+                <div class="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black flex items-center justify-center border border-white/10 group-hover:border-white/20">
+                  <i class="fas fa-plus text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text group-hover:scale-110 transition-all text-sm sm:text-base"></i>
                 </div>
               </button>
             </div>
 
             <!-- Search Bar -->
-            <div class="p-4">
+            <div class="p-3 sm:p-4">
               <div class="relative group">
-                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                <div class="relative flex items-center gap-3 bg-white/5 rounded-xl px-4 py-2.5 border border-white/10 group-hover:border-white/20 transition-all duration-300">
-                  <i class="fas fa-magnifying-glass text-white/40 group-hover:text-white/60 transition-colors"></i>
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg sm:rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                <div class="relative flex items-center gap-2 sm:gap-3 bg-white/5 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 border border-white/10 group-hover:border-white/20 transition-all duration-300">
+                  <i class="fas fa-magnifying-glass text-white/40 group-hover:text-white/60 transition-colors text-sm"></i>
                   <input 
                     type="text" 
                     placeholder="Search notes..." 
-                    class="bg-transparent w-full text-white placeholder-white/40 focus:placeholder-white/60 outline-none text-sm"
+                    class="bg-transparent w-full text-white placeholder-white/40 focus:placeholder-white/60 outline-none text-xs sm:text-sm"
                   />
-
                 </div>
               </div>
             </div>
 
             <!-- Notes List -->
-            <div class="px-4 space-y-3 relative">
+            <div class="px-3 sm:px-4 space-y-2 sm:space-y-3 relative">
               <!-- Floating Action Button -->
               <button 
                 @click="scrollToTop"
@@ -126,26 +126,26 @@
               </button>
 
               <!-- Note Items -->
-              <div class="space-y-3">
+              <div class="space-y-2 sm:space-y-3">
                 <!-- Note 1 -->
                 <div class="group relative">
-                  <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                  <div class="relative p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all border border-white/10 group-hover:border-white/20">
-                    <div class="flex items-start gap-4">
+                  <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 rounded-lg sm:rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                  <div class="relative p-3 sm:p-4 bg-white/5 rounded-lg sm:rounded-xl hover:bg-white/10 transition-all border border-white/10 group-hover:border-white/20">
+                    <div class="flex items-start gap-3 sm:gap-4">
                       <div class="shrink-0">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <i class="fas fa-code text-blue-400 group-hover:text-blue-300"></i>
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <i class="fas fa-code text-blue-400 group-hover:text-blue-300 text-sm sm:text-base"></i>
                         </div>
                       </div>
                       <div class="flex-1 min-w-0">
                         <div class="flex items-center justify-between mb-1">
-                          <h4 class="text-white font-medium truncate">API Integration</h4>
-                          <span class="text-xs text-white/40">2m ago</span>
+                          <h4 class="text-white text-sm sm:text-base font-medium truncate">API Integration</h4>
+                          <span class="text-[10px] sm:text-xs text-white/40">2m ago</span>
                         </div>
-                        <p class="text-sm text-gray-400 line-clamp-2 mb-2">Implementation steps...</p>
-                        <div class="flex items-center gap-2">
-                          <span class="px-2 py-1 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">#coding</span>
-                          <span class="px-2 py-1 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">#api</span>
+                        <p class="text-xs sm:text-sm text-gray-400 line-clamp-2 mb-2">Implementation steps...</p>
+                        <div class="flex items-center gap-1.5 sm:gap-2">
+                          <span class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">#coding</span>
+                          <span class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">#api</span>
                         </div>
                       </div>
                     </div>
@@ -154,31 +154,31 @@
 
                 <!-- Note 2 -->
                 <div class="group relative">
-                  <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-500/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                  <div class="relative p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all border border-white/10 group-hover:border-white/20">
-                    <div class="flex items-start gap-4">
+                  <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-green-500/20 rounded-lg sm:rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                  <div class="relative p-3 sm:p-4 bg-white/5 rounded-lg sm:rounded-xl hover:bg-white/10 transition-all border border-white/10 group-hover:border-white/20">
+                    <div class="flex items-start gap-3 sm:gap-4">
                       <div class="shrink-0">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <i class="fas fa-list-check text-green-400 group-hover:text-green-300"></i>
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <i class="fas fa-list-check text-green-400 group-hover:text-green-300 text-sm sm:text-base"></i>
                         </div>
                       </div>
                       <div class="flex-1 min-w-0">
                         <div class="flex items-center justify-between mb-1">
-                          <h4 class="text-white font-medium truncate">Project Roadmap</h4>
-                          <span class="text-xs text-white/40">1h ago</span>
+                          <h4 class="text-white text-sm sm:text-base font-medium truncate">Project Roadmap</h4>
+                          <span class="text-[10px] sm:text-xs text-white/40">1h ago</span>
                         </div>
-                        <p class="text-sm text-gray-400 line-clamp-2 mb-2">Q1 Goals: 1. Launch beta...</p>
-                        <div class="flex items-center gap-2">
-                          <span class="px-2 py-1 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">#planning</span>
-                          <span class="px-2 py-1 text-xs rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">#goals</span>
+                        <p class="text-xs sm:text-sm text-gray-400 line-clamp-2 mb-2">Q1 Goals: 1. Launch beta...</p>
+                        <div class="flex items-center gap-1.5 sm:gap-2">
+                          <span class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">#planning</span>
+                          <span class="px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">#goals</span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <!-- Note 3 -->
-                <div class="group relative">
+                <!-- Note 3 - Hide on mobile -->
+                <div class="hidden sm:block group relative">
                   <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-yellow-500/20 to-orange-500/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition duration-300"></div>
                   <div class="relative p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all border border-white/10 group-hover:border-white/20">
                     <div class="flex items-start gap-4">
@@ -207,7 +207,7 @@
         </Phone>
          
 
-          <Text title="Organized Notes" description="Keep your notes neatly organized with folders, tags, and smart categorization." :items="[
+          <Text class="order-2" title="Organized Notes" description="Keep your notes neatly organized with folders, tags, and smart categorization." :items="[
             { icon: 'fas fa-folder-tree', iconColor: 'blue', text: 'Create custom folders' },
             { icon: 'fas fa-tags', iconColor: 'purple', text: 'Tag and categorize notes' },
             { icon: 'fas fa-magnifying-glass', iconColor: 'green', text: 'Smart search and filters' }
@@ -216,14 +216,14 @@
 
         <div class="grid md:grid-cols-2 gap-20 items-center mt-24">
 
-          <Text title="Editing Notes and Store Files" description="Powerful editing tools and file management to keep your content organized and accessible." :items="[
+          <Text class="order-2 md:order-1" title="Editing Notes and Store Files" description="Powerful editing tools and file management to keep your content organized and accessible." :items="[
             { icon: 'fas fa-pen-to-square', iconColor: 'blue', text: 'Rich text editor with formatting' },
             { icon: 'fas fa-folder-open', iconColor: 'purple', text: 'Store and organize any file type' },
             { icon: 'fas fa-cloud', iconColor: 'green', text: 'Cloud sync and backup' }
           ]" />
           
           <!-- Visual: Modern Telegram Interface -->
-          <Phone>
+          <Phone class="order-1 md:order-2">
             <div class="px-5 py-4 flex items-center gap-4 border-b border-white/5 backdrop-blur-sm bg-black/20">
 
               <!-- Back Button -->

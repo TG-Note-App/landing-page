@@ -1289,8 +1289,6 @@ const isSubmitting = ref(false)
 const formMessage = ref('')
 const formMessageType = ref<'success' | 'error' | null>(null)
 
-// Scroll handling
-const showFloatingCTA = ref(false)
 let scrollTimeout: number | null = null
 
 
@@ -1306,11 +1304,6 @@ const scrollToForm = () => {
       block: 'start'
     })
   }
-}
-
-const validateEmail = (email: string): boolean => {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return re.test(email)
 }
 
 const submitTimeout = ref<number | null>(null)
@@ -1385,22 +1378,6 @@ onUnmounted(() => {
     clearTimeout(submitTimeout.value)
   }
 })
-
-// Cache the Telegram URL
-const TELEGRAM_BOT_URL = 'https://t.me/your_bot_username'
-const openTelegramBot = () => {
-  window.location.href = TELEGRAM_BOT_URL
-}
-
-const scrollToContent = () => {
-  const contentElement = document.querySelector('.mb-24.mt-24')
-  if (contentElement) {
-    contentElement.scrollIntoView({ 
-      behavior: 'smooth',
-      block: 'start'
-    })
-  }
-}
 
 // Add these new refs and functions
 const showScrollToTop = ref(false)

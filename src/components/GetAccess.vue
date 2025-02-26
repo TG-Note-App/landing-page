@@ -1,31 +1,31 @@
 <template>
-    <div class="relative mb-24" id="contact">
+    <div class="relative mb-16 sm:mb-24 px-4 sm:px-0" id="contact">
         <!-- Enhanced Background Effects -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-blue-600/10 rounded-3xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-blue-600/10 rounded-2xl sm:rounded-3xl"></div>
         <div class="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay"></div>
         
         <!-- Content Container -->
-        <div class="relative bg-gray-900/50 rounded-3xl p-12 backdrop-blur-xl border border-white/10">
-            <div class="max-w-2xl mx-auto text-center mb-12">
-            <h2 class="text-4xl font-bold mb-6">
+        <div class="relative bg-gray-900/50 rounded-2xl sm:rounded-3xl p-6 sm:p-12 backdrop-blur-xl border border-white/10">
+            <div class="max-w-2xl mx-auto text-center mb-8 sm:mb-12">
+            <h2 class="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">
                 <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 text-transparent bg-clip-text">
                 Get Early Access
                 </span>
             </h2>
-            <p class="text-lg text-gray-300 mb-8">
+            <p class="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8">
                 Join our beta program and be among the first to experience the future of note-taking in Telegram.
             </p>
             </div>
 
             <!-- Contact Form -->
-            <form @submit="handleSubmit" class="max-w-lg mx-auto space-y-6">
-            <div class="space-y-4">
+            <form @submit="handleSubmit" class="max-w-lg mx-auto space-y-4 sm:space-y-6">
+            <div class="space-y-3 sm:space-y-4">
                 <div class="relative group">
                 <input 
                     v-model="email"
                     type="email" 
                     placeholder="Your email address"
-                    class="w-full px-6 py-4 bg-black/50 rounded-xl border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:border-blue-500/50 transition-all"
+                    class="w-full px-4 sm:px-6 py-3 sm:py-4 bg-black/50 rounded-xl border border-white/10 text-white text-sm sm:text-base placeholder:text-gray-500 focus:outline-none focus:border-blue-500/50 transition-all"
                     :disabled="isSubmitting"
                     required
                 />
@@ -34,7 +34,7 @@
                 <!-- Form Message -->
                 <div v-if="formMessage" 
                 :class="[
-                    'text-sm px-4 py-2 rounded-lg transition-all',
+                    'text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-lg transition-all',
                     formMessageType === 'success' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                 ]"
                 >
@@ -48,12 +48,12 @@
                 :disabled="isSubmitting"
             >
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <div class="relative w-full px-8 py-4 bg-black rounded-full leading-none flex items-center justify-center gap-3 border border-white/10 group-hover:border-white/20 transition-all duration-300">
-                <span v-if="isSubmitting" class="text-lg font-semibold text-white">
+                <div class="relative w-full px-6 sm:px-8 py-3 sm:py-4 bg-black rounded-full leading-none flex items-center justify-center gap-2 sm:gap-3 border border-white/10 group-hover:border-white/20 transition-all duration-300">
+                <span v-if="isSubmitting" class="text-base sm:text-lg font-semibold text-white">
                     <i class="fas fa-spinner fa-spin mr-2"></i>Submitting...
                 </span>
-                <span v-else class="text-lg font-semibold text-white group-hover:text-blue-200 transition-colors">
-                    Join the Beta Program
+                <span v-else class="text-base sm:text-lg font-semibold text-white group-hover:text-blue-200 transition-colors">
+                    Enjoy the App
                     <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                 </span>
                 </div>
